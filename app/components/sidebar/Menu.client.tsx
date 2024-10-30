@@ -114,7 +114,7 @@ export function Menu() {
             href="/"
             className="flex gap-2 items-center bg-bolt-elements-sidebar-buttonBackgroundDefault text-bolt-elements-sidebar-buttonText hover:bg-bolt-elements-sidebar-buttonBackgroundHover rounded-md p-2 transition-theme"
           >
-            <span className="inline-block i-bolt:chat scale-110" />
+            <img src="/icons/Copy of Innovate HUB (500 x 500 px) 2.png" alt="Logo" className="w-[20px] h-[20px] inline-block" />
             Start new chat
           </a>
         </div>
