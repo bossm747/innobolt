@@ -1,5 +1,5 @@
 services:
-  bolt-app:
+  innodev-ai:
     build:
       context: .
       dockerfile: Dockerfile

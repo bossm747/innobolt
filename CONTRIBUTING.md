@@ -1,6 +1,6 @@
-# Contributing to Bolt.new Fork
+# Contributing to innodev ai Fork
 
-First off, thank you for considering contributing to Bolt.new! This fork aims to expand the capabilities of the original project by integrating multiple LLM providers and enhancing functionality. Every contribution helps make Bolt.new a better tool for developers worldwide.
+First off, thank you for considering contributing to innodev ai! This fork aims to expand the capabilities of the original project by integrating multiple LLM providers and enhancing functionality. Every contribution helps make innodev ai a better tool for developers worldwide.
 
 ## 📋 Table of Contents
 - [Code of Conduct](#code-of-conduct)
@@ -58,7 +58,7 @@ We're looking for dedicated contributors to help maintain and grow this project.
 ### 🔄 Initial Setup
 1. Clone the repository:
 ```bash
-git clone https://github.com/coleam00/bolt.new-any-llm.git
+git clone https://github.com/coleam00/innodev ai-any-llm.git
 ```
 
 2. Install dependencies:
@@ -95,4 +95,4 @@ For any questions about contributing, please:
 2. Search through issues
 3. Create a new issue with the question label
 
-Thank you for contributing to Bolt.new! 🚀
+Thank you for contributing to innodev ai! 🚀
