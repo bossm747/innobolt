@@ -1,8 +1,8 @@
-[![Bolt.new: AI-Powered Full-Stack Web Development in the Browser](./public/social_preview_index.jpg)](https://bolt.new)
+[![innodev ai: AI-Powered Full-Stack Web Development in the Browser](./public/social_preview_index.jpg)](https://innodev ai)
 
-# Bolt.new Fork by Cole Medin
+# innodev ai Fork by Cole Medin
 
-This fork of Bolt.new allows you to choose the LLM that you use for each prompt! Currently, you can use OpenAI, Anthropic, Ollama, OpenRouter, Gemini, or Groq models - and it is easily extended to use any other model supported by the Vercel AI SDK! See the instructions below for running this locally and extending it to include more models.
+This fork of innodev ai allows you to choose the LLM that you use for each prompt! Currently, you can use OpenAI, Anthropic, Ollama, OpenRouter, Gemini, or Groq models - and it is easily extended to use any other model supported by the Vercel AI SDK! See the instructions below for running this locally and extending it to include more models.
 
 # Requested Additions to this Fork - Feel Free to Contribute!!
 
@@ -11,14 +11,14 @@ This fork of Bolt.new allows you to choose the LLM that you use for each prompt!
 - ✅ Autogenerate Ollama models from what is downloaded (@yunatamos)
 - ✅ Filter models by provider (@jasonm23)
 - ✅ Download project as ZIP (@fabwaseem)
-- ✅ Improvements to the main Bolt.new prompt in `app\lib\.server\llm\prompts.ts` (@kofi-bhr)
+- ✅ Improvements to the main innodev ai prompt in `app\lib\.server\llm\prompts.ts` (@kofi-bhr)
 - ✅ DeepSeek API Integration (@zenith110)
 - ✅ Mistral API Integration (@ArulGandhi)
 - ✅ "Open AI Like" API Integration (@ZerxZ)
 - ✅ Ability to sync files (one way sync) to local folder (@muzafferkadir)
 - ✅ Containerize the application with Docker for easy installation (@aaronbolton)
 - ✅ Publish projects directly to GitHub (@goncaloalves)
-- ⬜ Prevent Bolt from rewriting files as often (Done but need to review PR still)
+- ⬜ Prevent innodev ai from rewriting files as often (Done but need to review PR still)
 - ⬜ **HIGH PRIORITY** - Better prompting for smaller LLMs (code window sometimes doesn't start)
 - ⬜ **HIGH PRIORITY** - Attach images to prompts
 - ⬜ **HIGH PRIORITY** - Run agents in the backend as opposed to a single model call
@@ -34,26 +34,26 @@ This fork of Bolt.new allows you to choose the LLM that you use for each prompt!
 - ⬜ Ability to enter API keys in the UI
 - ⬜ Have LLM plan the project in a MD file for better results/transparency
 
-# Bolt.new: AI-Powered Full-Stack Web Development in the Browser
+# innodev ai: AI-Powered Full-Stack Web Development in the Browser
 
-Bolt.new is an AI-powered web development agent that allows you to prompt, run, edit, and deploy full-stack applications directly from your browser—no local setup required. If you're here to build your own AI-powered web dev agent using the Bolt open source codebase, [click here to get started!](./CONTRIBUTING.md)
+innodev ai is an AI-powered web development agent that allows you to prompt, run, edit, and deploy full-stack applications directly from your browser—no local setup required. If you're here to build your own AI-powered web dev agent using the innodev ai open source codebase, [click here to get started!](./CONTRIBUTING.md)
 
-## What Makes Bolt.new Different
+## What Makes innodev ai Different
 
-Claude, v0, etc are incredible- but you can't install packages, run backends, or edit code. That’s where Bolt.new stands out:
+Claude, v0, etc are incredible- but you can't install packages, run backends, or edit code. That’s where innodev ai stands out:
 
-- **Full-Stack in the Browser**: Bolt.new integrates cutting-edge AI models with an in-browser development environment powered by **StackBlitz’s WebContainers**. This allows you to:
+- **Full-Stack in the Browser**: innodev ai integrates cutting-edge AI models with an in-browser development environment powered by **Innovate Hub ph’s WebContainers**. This allows you to:
   - Install and run npm tools and libraries (like Vite, Next.js, and more)
   - Run Node.js servers
   - Interact with third-party APIs
   - Deploy to production from chat
   - Share your work via a URL
 
-- **AI with Environment Control**: Unlike traditional dev environments where the AI can only assist in code generation, Bolt.new gives AI models **complete control** over the entire  environment including the filesystem, node server, package manager, terminal, and browser console. This empowers AI agents to handle the whole app lifecycle—from creation to deployment.
+- **AI with Environment Control**: Unlike traditional dev environments where the AI can only assist in code generation, innodev ai gives AI models **complete control** over the entire  environment including the filesystem, node server, package manager, terminal, and browser console. This empowers AI agents to handle the whole app lifecycle—from creation to deployment.
 
-Whether you’re an experienced developer, a PM, or a designer, Bolt.new allows you to easily build production-grade full-stack applications.
+Whether you’re an experienced developer, a PM, or a designer, innodev ai allows you to easily build production-grade full-stack applications.
 
-For developers interested in building their own AI-powered development tools with WebContainers, check out the open-source Bolt codebase in this repo!
+For developers interested in building their own AI-powered development tools with WebContainers, check out the open-source innodev ai codebase in this repo!
 
 ## Prerequisites
 
@@ -67,7 +67,7 @@ Before you begin, ensure you have the following installed:
 1. Clone the repository (if you haven't already):
 
 ```bash
-git clone https://github.com/coleam00/bolt.new-any-llm.git
+git clone https://github.com/coleam00/innodev ai-any-llm.git
 ```
 
 2. Install dependencies:
@@ -94,7 +94,7 @@ VITE_LOG_LEVEL=debug
 
 ## Adding New LLMs:
 
-To make new LLMs available to use in this version of Bolt.new, head on over to `app/utils/constants.ts` and find the constant MODEL_LIST. Each element in this array is an object that has the model ID for the name (get this from the provider's API documentation), a label for the frontend model dropdown, and the provider. 
+To make new LLMs available to use in this version of innodev ai, head on over to `app/utils/constants.ts` and find the constant MODEL_LIST. Each element in this array is an object that has the model ID for the name (get this from the provider's API documentation), a label for the frontend model dropdown, and the provider. 
 
 By default, Anthropic, OpenAI, Groq, and Ollama are implemented as providers, but the YouTube video for this repo covers how to extend this to work with more providers if you wish!
 
@@ -123,12 +123,12 @@ This will start the Remix Vite development server. You will need Google Chrome C
 
 ## Tips and Tricks
 
-Here are some tips to get the most out of Bolt.new:
+Here are some tips to get the most out of innodev ai:
 
-- **Be specific about your stack**: If you want to use specific frameworks or libraries (like Astro, Tailwind, ShadCN, or any other popular JavaScript framework), mention them in your initial prompt to ensure Bolt scaffolds the project accordingly.
+- **Be specific about your stack**: If you want to use specific frameworks or libraries (like Astro, Tailwind, ShadCN, or any other popular JavaScript framework), mention them in your initial prompt to ensure innodev ai scaffolds the project accordingly.
 
 - **Use the enhance prompt icon**: Before sending your prompt, try clicking the 'enhance' icon to have the AI model help you refine your prompt, then edit the results before submitting.
 
-- **Scaffold the basics first, then add features**: Make sure the basic structure of your application is in place before diving into more advanced functionality. This helps Bolt understand the foundation of your project and ensure everything is wired up right before building out more advanced functionality.
+- **Scaffold the basics first, then add features**: Make sure the basic structure of your application is in place before diving into more advanced functionality. This helps innodev ai understand the foundation of your project and ensure everything is wired up right before building out more advanced functionality.
 
-- **Batch simple instructions**: Save time by combining simple instructions into one message. For example, you can ask Bolt to change the color scheme, add mobile responsiveness, and restart the dev server, all in one go saving you time and reducing API credit consumption significantly.
+- **Batch simple instructions**: Save time by combining simple instructions into one message. For example, you can ask innodev ai to change the color scheme, add mobile responsiveness, and restart the dev server, all in one go saving you time and reducing API credit consumption significantly.

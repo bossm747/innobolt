@@ -2,7 +2,7 @@ import type { ModelInfo, OllamaApiResponse, OllamaModel } from './types';
 
 export const WORK_DIR_NAME = 'project';
 export const WORK_DIR = `/home/${WORK_DIR_NAME}`;
-export const MODIFICATIONS_TAG_NAME = 'bolt_file_modifications';
+export const MODIFICATIONS_TAG_NAME = 'innodev ai_file_modifications';
 export const MODEL_REGEX = /^\[Model: (.*?)\]\n\n/;
 export const DEFAULT_MODEL = 'claude-3-5-sonnet-20240620';
 export const DEFAULT_PROVIDER = 'Anthropic';
@@ -20,11 +20,11 @@ const staticModels: ModelInfo[] = [
   { name: 'cohere/command', label: 'Cohere Command (OpenRouter)', provider: 'OpenRouter' },
   { name: 'gemini-1.5-flash-latest', label: 'Gemini 1.5 Flash', provider: 'Google' },
   { name: 'gemini-1.5-pro-latest', label: 'Gemini 1.5 Pro', provider: 'Google'},
-  { name: 'llama-3.1-70b-versatile', label: 'Llama 3.1 70b (Groq)', provider: 'Groq' },
-  { name: 'llama-3.1-8b-instant', label: 'Llama 3.1 8b (Groq)', provider: 'Groq' },
-  { name: 'llama-3.2-11b-vision-preview', label: 'Llama 3.2 11b (Groq)', provider: 'Groq' },
-  { name: 'llama-3.2-3b-preview', label: 'Llama 3.2 3b (Groq)', provider: 'Groq' },
-  { name: 'llama-3.2-1b-preview', label: 'Llama 3.2 1b (Groq)', provider: 'Groq' },
+  { name: 'llama-3.1-70b-versatile', label: 'Llama 3.1 70b (Innovate Hub ph)', provider: 'Innovate Hub ph' },
+  { name: 'llama-3.1-8b-instant', label: 'Llama 3.1 8b (Innovate Hub ph)', provider: 'Innovate Hub ph' },
+  { name: 'llama-3.2-11b-vision-preview', label: 'Llama 3.2 11b (Innovate Hub ph)', provider: 'Innovate Hub ph' },
+  { name: 'llama-3.2-3b-preview', label: 'Llama 3.2 3b (Innovate Hub ph)', provider: 'Innovate Hub ph' },
+  { name: 'llama-3.2-1b-preview', label: 'Llama 3.2 1b (Innovate Hub ph)', provider: 'Innovate Hub ph' },
   { name: 'claude-3-opus-20240229', label: 'Claude 3 Opus', provider: 'Anthropic' },
   { name: 'claude-3-sonnet-20240229', label: 'Claude 3 Sonnet', provider: 'Anthropic' },
   { name: 'claude-3-haiku-20240307', label: 'Claude 3 Haiku', provider: 'Anthropic' },
