@@ -126,7 +126,7 @@ export const Workbench = memo(({ chatStarted, isStreaming }: WorkspaceProps) => 
       >
         <div
           className={classNames(
-            'fixed top-[calc(var(--header-height)+1.5rem)] bottom-6 w-[var(--workbench-inner-width)] mr-4 z-0 transition-[left,width] duration-200 bolt-ease-cubic-bezier',
+            'fixed top-[calc(var(--header-height)+1.5rem)] bottom-6 w-[var(--workbench-inner-width)] mr-4 z-0 transition-[left,width] duration-200 innodev-ease-cubic-bezier',
             {
               'left-[var(--workbench-left)]': showWorkbench,
               'left-[100%]': !showWorkbench,
@@ -134,8 +134,8 @@ export const Workbench = memo(({ chatStarted, isStreaming }: WorkspaceProps) => 
           )}
         >
           <div className="absolute inset-0 px-6">
-            <div className="h-full flex flex-col bg-bolt-elements-background-depth-2 border border-bolt-elements-borderColor shadow-sm rounded-lg overflow-hidden">
-              <div className="flex items-center px-3 py-2 border-b border-bolt-elements-borderColor">
+            <div className="h-full flex flex-col bg-innodev-elements-background-depth-2 border border-innodev-elements-borderColor shadow-sm rounded-lg overflow-hidden">
+              <div className="flex items-center px-3 py-2 border-b border-innodev-elements-borderColor">
                 <Slider selected={selectedView} options={sliderOptions} setSelected={setSelectedView} />
                 <div className="ml-auto" />
                 {selectedView === 'code' && (
@@ -165,7 +165,7 @@ export const Workbench = memo(({ chatStarted, isStreaming }: WorkspaceProps) => 
                     <PanelHeaderButton
                       className="mr-1 text-sm"
                       onClick={() => {
-                        const repoName = prompt("Please enter a name for your new GitHub repository:", "bolt-generated-project");
+                        const repoName = prompt("Please enter a name for your new GitHub repository:", "innodev-generated-project");
                         if (!repoName) {
                           alert("Repository name is required. Push to GitHub cancelled.");
                           return;
