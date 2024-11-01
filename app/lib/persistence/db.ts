@@ -37,7 +37,10 @@ export async function getAll(db: IDBDatabase): Promise<ChatHistoryItem[]> {
     const request = store.getAll();
 
     request.onsuccess = () => resolve(request.result as ChatHistoryItem[]);
-    request.onerror = () => reject(request.error);
+    request.onerror = () => {
+      logger.error('Failed to get all chat history items', request.error);
+      reject(request.error);
+    };
   });
 }
 
@@ -61,7 +64,10 @@ export async function setMessages(
     });
 
     request.onsuccess = () => resolve();
-    request.onerror = () => reject(request.error);
+    request.onerror = () => {
+      logger.error('Failed to set messages', request.error);
+      reject(request.error);
+    };
   });
 }
 
@@ -77,7 +83,10 @@ export async function getMessagesByUrlId(db: IDBDatabase, id: string): Promise<C
     const request = index.get(id);
 
     request.onsuccess = () => resolve(request.result as ChatHistoryItem);
-    request.onerror = () => reject(request.error);
+    request.onerror = () => {
+      logger.error('Failed to get messages by URL ID', request.error);
+      reject(request.error);
+    };
   });
 }
 
@@ -88,7 +97,10 @@ export async function getMessagesById(db: IDBDatabase, id: string): Promise<Chat
     const request = store.get(id);
 
     request.onsuccess = () => resolve(request.result as ChatHistoryItem);
-    request.onerror = () => reject(request.error);
+    request.onerror = () => {
+      logger.error('Failed to get messages by ID', request.error);
+      reject(request.error);
+    };
   });
 }
 
@@ -99,7 +111,10 @@ export async function deleteById(db: IDBDatabase, id: string): Promise<void> {
     const request = store.delete(id);
 
     request.onsuccess = () => resolve(undefined);
-    request.onerror = () => reject(request.error);
+    request.onerror = () => {
+      logger.error('Failed to delete chat history item by ID', request.error);
+      reject(request.error);
+    };
   });
 }
 
@@ -114,7 +129,10 @@ export async function getNextId(db: IDBDatabase): Promise<string> {
       resolve(String(+highestId + 1));
     };
 
-    request.onerror = () => reject(request.error);
+    request.onerror = () => {
+      logger.error('Failed to get next ID', request.error);
+      reject(request.error);
+    };
   });
 }
 
@@ -154,6 +172,7 @@ async function getUrlIds(db: IDBDatabase): Promise<string[]> {
     };
 
     request.onerror = () => {
+      logger.error('Failed to get URL IDs', request.error);
       reject(request.error);
     };
   });

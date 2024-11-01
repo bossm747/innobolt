@@ -16,54 +16,58 @@ export function usePromptEnhancer() {
     setEnhancingPrompt(true);
     setPromptEnhanced(false);
 
-    const response = await fetch('/api/enhancer', {
-      method: 'POST',
-      body: JSON.stringify({
-        message: input,
-      }),
-    });
+    try {
+      const response = await fetch('/api/enhancer', {
+        method: 'POST',
+        body: JSON.stringify({
+          message: input,
+        }),
+      });
 
-    const reader = response.body?.getReader();
+      const reader = response.body?.getReader();
 
-    const originalInput = input;
+      const originalInput = input;
 
-    if (reader) {
-      const decoder = new TextDecoder();
+      if (reader) {
+        const decoder = new TextDecoder();
 
-      let _input = '';
-      let _error;
+        let _input = '';
+        let _error;
 
-      try {
-        setInput('');
+        try {
+          setInput('');
 
-        while (true) {
-          const { value, done } = await reader.read();
+          while (true) {
+            const { value, done } = await reader.read();
 
-          if (done) {
-            break;
+            if (done) {
+              break;
+            }
+
+            _input += decoder.decode(value);
+
+            logger.trace('Set input', _input);
+
+            setInput(_input);
+          }
+        } catch (error) {
+          _error = error;
+          setInput(originalInput);
+        } finally {
+          if (_error) {
+            logger.error(_error);
           }
 
-          _input += decoder.decode(value);
+          setEnhancingPrompt(false);
+          setPromptEnhanced(true);
 
-          logger.trace('Set input', _input);
-
-          setInput(_input);
+          setTimeout(() => {
+            setInput(_input);
+          });
         }
-      } catch (error) {
-        _error = error;
-        setInput(originalInput);
-      } finally {
-        if (_error) {
-          logger.error(_error);
-        }
-
-        setEnhancingPrompt(false);
-        setPromptEnhanced(true);
-
-        setTimeout(() => {
-          setInput(_input);
-        });
       }
+    } catch (error) {
+      logger.error('Failed to enhance prompt\n\n', error);
     }
   };
 
